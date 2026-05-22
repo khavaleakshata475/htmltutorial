@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Tutorial: The Basics</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            background: #222;
+            color: pink;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            background: pink;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        a {
+            color: purple;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: purple;
+        }
+
+        pre {
+            background: #000;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        /* Feedback Form Design */
+
+        .form-box {
+            width: 350px;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            padding: 20px;
+            border-radius: 12px;
+            color: pink;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .form-box label {
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #222;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: black;
+        }
+    </style>
+
+    <script>
+
+        function submitForm() {
+            alert("Thank you for your feedback!");
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>HTML WEBPAGE</h1>
+
+    <h3>Lessons</h3>
+
+    <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#structure">Basic Structure</a></li>
+        <li><a href="#elements">Common Elements</a></li>
+        <li><a href="#feedback">Feedback Form</a></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="intro">Introduction to HTML</h2>
+
+    <p>
+        HTML stands for
+        <strong>HyperText Markup Language</strong>.
+        It is the backbone of every website.
+    </p>
+
+    <hr>
+
+    <h2 id="structure">Basic Structure</h2>
+
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </pre>
+
+    <hr>
+
+    <h2 id="elements">Common Elements</h2>
+
+    <ul>
+        <li>&lt;h1&gt; to &lt;h6&gt; : Headings</li>
+        <li>&lt;p&gt; : Paragraphs</li>
+        <li>&lt;a&gt; : Hyperlinks</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="feedback">Feedback Form</h2>
+
+    <div class="form-box">
+
+        <form onsubmit="submitForm(); return false;">
+
+            <label>Name:</label>
+
+            <input
+                type="text"
+                placeholder="Enter your name"
+                required
+                oninput="this.value = this.value.replace(/[^A-Za-z ]/g, '')">
+
+            <label>Email:</label>
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required>
+
+            <label>Feedback:</label>
+
+            <textarea
+                placeholder="Write your feedback here..."
+                required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+
+        </form>
+
+    </div>
+
+    <hr>
+
+    <p>&copy; 2026 My HTML Tutorial</p>
+
+</body>
+
+</html>
